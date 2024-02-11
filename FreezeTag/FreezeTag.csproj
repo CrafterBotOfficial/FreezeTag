@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+
+    <GamePath>D:\Games\Oculus\Software\another-axiom-gorilla-tag\</GamePath>
+    <BepInExPath>$(GamePath)/BepInEx/</BepInExPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="$(GamePath)/**" Exclude="$(BepInExPath)/0Harmony20.dll">
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Patches"/>
+  </ItemGroup>
+</Project>
